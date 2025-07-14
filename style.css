@@ -1,16 +1,18 @@
 :root {
-  --primary-color: (black);
-  --secondary-color: ();
+    --primary-color: (black);
+    --secondary-color: (green);
     --background-color: (rgb(231, 227, 218));
-  --spacing: 20px;
-  font-family: 'Nunito Sans', sans-serif;
+    --spacing: 20px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 h1 {
-    font-size: 7rem;
+    font-size: 8rem;
     color: var(--primary-color);
     text-align: center;
     font-family: 'Antonio', sans-serif;
+    padding: var(--spacing);
+    margin-right: 700px;
 }
 
 h2 {
@@ -18,4 +20,42 @@ h2 {
     color: var(--secondary-color);
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--spacing);
+    align-items: center;
+    padding: var(--spacing);
+    background-color: var(--background-color);
+    margin-top: -60px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    width: 300px;
+    height: 100px;
+    margin-left: var(--spacing);
+    margin-right: var(--spacing);
+    top: 0;
+}
+
+img {
+    cursor: pointer;
+    width: 30%;
+    height: auto;
 }
