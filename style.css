@@ -1,7 +1,7 @@
 :root {
-    --primary-color: (black);
-    --secondary-color: (green);
-    --background-color: (rgb(231, 227, 218));
+    --primary-color: black;
+    --secondary-color: green;
+    --background-color: rgb(255, 255, 255);
     --spacing: 20px;
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -11,15 +11,19 @@ h1 {
     color: var(--primary-color);
     text-align: center;
     font-family: 'Antonio', sans-serif;
-    padding: var(--spacing);
-    margin-right: 700px;
+    padding:0;
+    margin-right: 4em;
+    cursor: default;
 }
 
 h2 {
     font-size: 2rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
+    padding: 50px;
+    margin: 0; 
+    cursor: default;
 }
 
 header {
@@ -30,6 +34,14 @@ header {
     padding: var(--spacing);
     background-color: var(--background-color);
     margin-top: -60px;
+}
+
+.featured-products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    justify-content: flex-start;
+    padding: 40px;
 }
 
 .sidebar {
@@ -46,16 +58,61 @@ header {
 .menu-icon {
     cursor: pointer;
     display: flex;
-    justify-content: left;
-    width: 300px;
-    height: 100px;
-    margin-left: var(--spacing);
-    margin-right: var(--spacing);
-    top: 0;
+    justify-content: flex-start;
 }
 
-img {
-    cursor: pointer;
-    width: 30%;
+.menu-icon img {
+    width: 40%;
     height: auto;
+}
+
+.products img {
+    cursor: pointer;
+    width: 25rem;
+    height: auto;
+    max-width: 500px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-evenly;
+}
+
+.item-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+#item-a, #item-b, #item-c, #item-d, #item-e, #item-f, #item-g, #item-h, #item-i, #item-j, #item-k, #item-l {
+    border: 8px solid var(--primary-color);
+    padding: var(--spacing);
+}
+
+
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 375px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 4rem;
+        margin-right: 0;
+    }
+    .menu-icon img {
+        width: 60%;
+    }
 }
