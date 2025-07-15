@@ -12,8 +12,9 @@ h1 {
     text-align: center;
     font-family: 'Antonio', sans-serif;
     padding:0;
-    margin-right: 4em;
+    margin-right: 44.5rem;
     cursor: default;
+    margin-left: -11rem;
 }
 
 h2 {
@@ -28,7 +29,7 @@ h2 {
 
 header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--spacing);
     align-items: center;
     padding: var(--spacing);
@@ -37,13 +38,16 @@ header {
     position: relative;
 }
 
+.menu-icon {
+    margin-left: -20px;
+}
+
 .introduction {
     position: absolute;
     text-align: center;
     padding: 20px;
     font-size: 1.2rem;
     color: var(--primary-color);
-    background-color: rgba(255, 255, 255, 0.678);
     top: 120px;
     right: 20px;
     cursor: default;
@@ -77,16 +81,28 @@ nav ul {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 250px;
+    left: -300px;
+    width: 300px;
     height: 100%;
     background-color: rgba(239, 238, 237, 1);
-    transition: left 0.3s ease;
-    padding-top: 60px;
+    transition: left 0.7s ease;
+    padding-top: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1000;
 }
 
-.menu-icon img {
-    width: 30%;
+.sidebar a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.menu-icon img { /*La idea principal era que clickeando el icono se abre el sidebar, pero al ver que necesitaba javascript, use el checkbox, no funciona igual, pero es lo que logré */
+    width: 5rem;
     height: auto;
     cursor: pointer;
     display: flex;
@@ -132,7 +148,7 @@ nav ul {
 
 footer {
     background-color: var(--background-color);
-    color: rgb(0, 0, 0);
+    color: var(--primary-color);
     text-align: center;
     padding: 20px;
     position: relative;
@@ -155,8 +171,16 @@ footer {
     transform: scale(1.1);
 }
 
-.menu-icon:hover + .sidebar {
+.sidebar-container input[type="checkbox"]:checked ~ .sidebar {
   left: 0;
+}
+
+#menu:checked + .menu-icon:hover ~ .sidebar {
+  left: 0;
+}
+
+.sidebar a:hover {
+  color: var(--secondary-color); /* verde al pasar el ratón */
 }
 
 
