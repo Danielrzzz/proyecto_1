@@ -11,10 +11,11 @@ h1 {
     color: var(--primary-color);
     text-align: center;
     font-family: 'Antonio', sans-serif;
-    padding:0;
-    margin-right: 44.5rem;
+    padding: 0;
+    margin-right: 80rem;
     cursor: default;
-    margin-left: -11rem;
+    top: 0.3rem;
+    margin-left: 50rem;
 }
 
 h2 {
@@ -29,24 +30,32 @@ h2 {
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--spacing);
     align-items: center;
     padding: var(--spacing);
     background-color: var(--background-color);
     margin-top: -60px;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .menu-icon {
-    margin-left: -20px;
+    width: 3rem;
+    position: absolute;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 7rem;
+    margin-left: 17rem;
 }
 
 .introduction {
     position: absolute;
     text-align: center;
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: var(--primary-color);
     top: 120px;
     right: 20px;
@@ -62,7 +71,7 @@ nav ul {
 .list-options {
     position: absolute;
     bottom: 0;
-    right: var(--spacing);
+    right: 6rem;
 }
 
 .list-options ul {
@@ -75,6 +84,7 @@ nav ul {
 .list-options li a {
   color: var(--primary-color);
   font-weight: 300;
+  font-size: 1.6rem;
   text-decoration: none;
 }
 
@@ -99,10 +109,11 @@ nav ul {
     text-decoration: none;
     font-weight: 300;
     font-size: 1.2rem;
+    margin-top: 5rem;
 }
 
 .menu-icon img { /*La idea principal era que clickeando el icono se abre el sidebar, pero al ver que necesitaba javascript, use el checkbox, no funciona igual, pero es lo que logré */
-    width: 5rem;
+    width: 9rem;
     height: auto;
     cursor: pointer;
     display: flex;
@@ -156,6 +167,11 @@ footer {
     width: 100%;
 }
 
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
 .item:hover {
   transform: scale(1.05);
   border-color: var(--secondary-color);
@@ -182,7 +198,54 @@ footer {
 .sidebar a:hover {
   color: var(--secondary-color); /* verde al pasar el ratón */
 }
+@media (max-width: 1440px) {
 
+.menu-icon {
+    margin-right: 8rem;
+}
+
+h1 {
+    font-size: 5.5rem;
+    margin-right: 23rem;
+    margin-left: 4rem;
+}
+
+.sidebar a {
+    font-size: 1.2rem;
+    margin-top: 5rem;
+}
+
+.list-options li a {
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+.introduction {
+    padding: 20px;
+    font-size: 1.2rem;
+    top: 120px;
+    right: 20px;
+}
+
+.sidebar {
+    left: -270px;
+    width: 270px;
+    height: 100%;
+    background-color: rgba(239, 238, 237, 1);
+    transition: left 0.7s ease;
+    padding-top: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 1000;
+}
+
+}
 
 @media (max-width: 768px) {
 
