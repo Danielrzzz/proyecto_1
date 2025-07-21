@@ -57,7 +57,7 @@ header {
     margin-left: 15rem;
 }
 
-.menu-icon img { /*La idea principal era que clickeando el icono se abre el sidebar, pero al ver que necesitaba javascript, use el checkbox, no funciona igual, pero es lo que logré */
+.menu-icon img { /*La idea principal era que clickeando el icono se abre el sidebar, pero al ver que necesitaba javascript, use el checkbox, no funciona igual, pero es lo que logré, pd: hay que clickear el icono para que abra y cierre el sidebar*/    
     width: 9rem;
     height: auto;
     cursor: pointer;
